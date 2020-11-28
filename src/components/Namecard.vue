@@ -1,6 +1,6 @@
 <template>
     <div id="namecard">
-        <transition name="fade">
+        <transition name="fade" v-if="bigScreenSize">
             <div class="first-page" v-if="onFirstPage">
                 <img src="@/assets/logo-full.svg" alt="full logo" />
                 <click-icon v-on:clickSwitch="flip"></click-icon>
@@ -33,6 +33,13 @@
                 ></click-icon>
             </div>
         </transition>
+        <div class="responsive" v-else>
+            <img src="@/assets/own-logo-white.svg" alt="own-branding-logo">
+            <p>TOO BIG</p>
+            <p>The screen size is too big,</p>
+            <p>You better use your phone or tablet</p>
+            <p>To view it with better experience</p>
+        </div>
     </div>
 </template>
 
@@ -61,7 +68,13 @@ export default {
                 },
             },
             onFirstPage: false,
+            bigScreenSize: false
         };
+    },
+    mounted() {
+        if (window.innerWidth < 425) {
+            this.bigScreenSize = true
+        }
     },
     methods: {
         flip() {
@@ -141,6 +154,24 @@ $line-height: 45px
             bottom: 0
             left: 50%
             transform: translate(-50%, 0)
+
+    .responsive
+        width: 100vw
+        height: 100vh
+        display: flex
+        flex-direction: column
+        justify-content: center
+
+        img
+            margin-bottom: $line-height
+
+        p
+            margin: 0
+            text-align: center
+
+        *:nth-child(2)
+            font-size: $title
+            font-weight: bold   
 
 // Animation
 .fade-enter-active, .fade-leave-active
