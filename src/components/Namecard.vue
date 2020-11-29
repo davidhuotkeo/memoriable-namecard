@@ -67,12 +67,12 @@ export default {
                     behance: ["https://behance.net/devithuotkeo"],
                 },
             },
-            onFirstPage: false,
+            onFirstPage: true,
             bigScreenSize: false
         };
     },
     mounted() {
-        if (window.innerWidth < 425) {
+        if (window.innerWidth < 500) {
             this.bigScreenSize = true
         }
     },
