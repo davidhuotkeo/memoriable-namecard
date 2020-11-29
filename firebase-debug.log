@@ -1,0 +1,60 @@
+[debug] [2020-11-29T03:42:50.228Z] ----------------------------------------------------------------------
+[debug] [2020-11-29T03:42:50.231Z] Command:       /usr/local/bin/node /usr/local/bin/firebase deploy
+[debug] [2020-11-29T03:42:50.232Z] CLI Version:   8.6.0
+[debug] [2020-11-29T03:42:50.232Z] Platform:      darwin
+[debug] [2020-11-29T03:42:50.232Z] Node Version:  v14.4.0
+[debug] [2020-11-29T03:42:50.233Z] Time:          Sun Nov 29 2020 10:42:50 GMT+0700 (Indochina Time)
+[debug] [2020-11-29T03:42:50.233Z] ----------------------------------------------------------------------
+[debug] [2020-11-29T03:42:50.233Z] 
+[debug] [2020-11-29T03:42:50.249Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2020-11-29T03:42:50.249Z] > authorizing via signed-in user
+[debug] [2020-11-29T03:42:50.250Z] [iam] checking project dave-namecard for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2020-11-29T03:42:50.253Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/dave-namecard:testIamPermissions  
+ {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2020-11-29T03:42:51.602Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Sun, 29 Nov 2020 03:42:51 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","server-timing":"gfet4t7; dur=1034","alt-svc":"h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2020-11-29T03:42:51.606Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/dave-namecard  
+ 
+[debug] [2020-11-29T03:42:52.312Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Sun, 29 Nov 2020 03:42:52 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[info] 
+[info] === Deploying to 'dave-namecard'...
+[info] 
+[info] i  deploying hosting 
+[debug] [2020-11-29T03:42:52.320Z] >>> HTTP REQUEST POST https://firebasehosting.googleapis.com/v1beta1/sites/dave-namecard/versions  
+ {"config":{"rewrites":[{"glob":"**","path":"/index.html"}]},"labels":{"deployment-tool":"cli-firebase"}}
+[debug] [2020-11-29T03:42:54.090Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Sun, 29 Nov 2020 03:42:53 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[info] i  hosting[dave-namecard]: beginning deploy... 
+[info] i  hosting[dave-namecard]: found 30 files in dist 
+[debug] [2020-11-29T03:42:54.244Z] [hosting] hash cache [ZGlzdA] stored for 30 files
+[debug] [2020-11-29T03:42:54.244Z] [hosting][hash queue][FINAL] {"max":117,"min":28,"avg":35.266666666666666,"active":0,"complete":30,"success":30,"errored":0,"retried":0,"total":30,"elapsed":134}
+[debug] [2020-11-29T03:42:54.245Z] >>> HTTP REQUEST POST https://firebasehosting.googleapis.com/v1beta1/sites/dave-namecard/versions/f2448c8faad5b0e6:populateFiles  
+ <request body omitted>
+[debug] [2020-11-29T03:42:55.900Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Sun, 29 Nov 2020 03:42:55 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2020-11-29T03:42:55.909Z] [hosting][populate queue][FINAL] {"max":1660,"min":1660,"avg":1660,"active":0,"complete":1,"success":1,"errored":0,"retried":0,"total":1,"elapsed":1666}
+[debug] [2020-11-29T03:42:55.910Z] [hosting] uploads queued: 10
+[debug] [2020-11-29T03:42:58.778Z] [hosting][upload queue][FINAL] {"max":2877,"min":2169,"avg":2406.1,"active":0,"complete":10,"success":10,"errored":0,"retried":0,"total":10,"elapsed":2877}
+[info] ✔  hosting[dave-namecard]: file upload complete 
+[debug] [2020-11-29T03:42:58.780Z] [hosting] deploy completed after 4688ms
+[debug] [2020-11-29T03:42:58.783Z] [
+  {
+    "config": {
+      "public": "dist",
+      "ignore": [
+        "firebase.json",
+        "**/.*",
+        "**/node_modules/**"
+      ],
+      "rewrites": [
+        {
+          "source": "**",
+          "destination": "/index.html"
+        }
+      ],
+      "site": "dave-namecard"
+    },
+    "site": "dave-namecard",
+    "version": "sites/dave-namecard/versions/f2448c8faad5b0e6"
+  }
+]
+[info] i  hosting[dave-namecard]: finalizing version... 
+[debug] [2020-11-29T03:42:58.784Z] >>> HTTP REQUEST PATCH https://firebasehosting.googleapis.com/v1beta1/sites/dave-namecard/versions/f2448c8faad5b0e6?updateMask=status  
+ {"status":"FINALIZED"}
