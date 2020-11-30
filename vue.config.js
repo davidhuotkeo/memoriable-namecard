@@ -5,7 +5,7 @@
         short_name: 'ave Namecard',
         themeColor: '#942F37',
         msTileColor: '#942F37',
-        backgroundColor: '#942F37',
+        backgroundColor: '#FFFFFF',
         manifestOptions: {
             icons: [
                 {
